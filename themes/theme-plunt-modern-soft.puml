@@ -49,7 +49,6 @@ skinparam HyperlinkColor   $PS_BLUE_LIGHT
 skinparam Shadowing        true
 skinparam RoundCorner      10
 skinparam Padding          10
-skinparam Handwritten      false
 
 '' ── Linee ortogonali (standard PA) ──────────────────────────
 skinparam linetype ortho
