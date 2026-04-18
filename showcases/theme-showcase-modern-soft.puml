@@ -1,0 +1,42 @@
+@startuml showcase-modern-soft-
+' ============================================================
+' THEME SHOWCASE — modern-soft
+' PA  Light · Sfondo bianco-azzurro · Colori  ufficiali
+' ============================================================
+!include https://raw.githubusercontent.com/vcherney88/themes_pantuml/main/themes/theme-plunt-modern-soft.puml
+skinparam linetype ortho
+title vlad-modern-pa-soft- ·  Light
+
+package "Servizi (Sfondo )" {
+  [Back-end Istanze] <<core>>
+  [Gestore Documenti] <<core>>
+  database "PostgreSQL" <<storage>>
+  queue "Message Queue" <<storage>>
+}
+
+package "Identità & Accesso" {
+  [SPID / CIE Auth] <<spid>>
+  [Sessioni] <<core>>
+}
+
+package "Piattaforme Nazionali" {
+  [pagoPA] <<pagoPA>>
+  [ANPR] <<anpr>>
+  [PDND] <<pdnd>>
+}
+
+[Back-end Istanze] --> [Gestore Documenti] : gestisci()
+[Back-end Istanze] --> "PostgreSQL" : persisti()
+[Back-end Istanze] --> "Message Queue" : pubblica()
+[Back-end Istanze] --> [SPID / CIE Auth] : verifica()
+[Back-end Istanze] --> [pagoPA] : pagamento()
+[Back-end Istanze] --> [ANPR] : anagrafica()
+[Back-end Istanze] --> [PDND] : interoperabilità()
+
+note right of "PostgreSQL"
+  Sfondo #F4F8FF —  light
+  Ideale per documenti print
+  e Confluence istituzionale
+end note
+
+@enduml
