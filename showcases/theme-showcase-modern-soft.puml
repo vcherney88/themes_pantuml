@@ -5,7 +5,7 @@
 ' ============================================================
 !include https://raw.githubusercontent.com/vcherney88/themes_pantuml/main/themes/theme-plunt-modern-soft.puml
 skinparam linetype ortho
-title vlad-modern-pa-soft- ·  Light
+title  modern-pa-soft- ·  Light
 
 package "Servizi (Sfondo )" {
   [Back-end Istanze] <<core>>
