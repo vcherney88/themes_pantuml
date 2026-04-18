@@ -3,7 +3,7 @@
 ' THEME SHOWCASE — modern-soft
 ' PA  Light · Sfondo bianco-azzurro · Colori  ufficiali
 ' ============================================================
-!include https://raw.githubusercontent.com/vcherney88/themes_pantuml/main/themes/theme-plunt-modern-soft.puml
+!include https://raw.githubusercontent.com/vcherney88/themes_pantuml/6cfceffedf79dab84d856386972b602b5a0e8e45/themes/theme-plunt-modern-soft.puml
 skinparam linetype ortho
 title  modern-pa-soft- ·  Light
 
