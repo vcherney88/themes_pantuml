@@ -1,0 +1,59 @@
+@startuml showcase-modern-soft-white
+' ============================================================
+' THEME SHOWCASE — modern-soft-white
+' Pure White · Sfondo bianco · Bordi sottili · Colori PA
+' ============================================================
+!include https://raw.githubusercontent.com/vcherney88/themes_pantuml/main/themes/theme-plunt-modern-soft-white.puml
+skinparam linetype ortho
+title modern-pa-soft-white · Pure White Edition
+
+package "Servizi (Sfondo Bianco)" {
+  [Back-end Istanze] <<core>>
+  [Gestore Documenti] <<core>>
+  database "PostgreSQL" <<storage>>
+  queue "Message Queue" <<storage>>
+}
+
+package "Identità & Accesso" {
+  [SPID / CIE Auth] <<spid>>
+  [Sessioni] <<core>>
+}
+
+package "Piattaforme Nazionali" {
+  [pagoPA] <<pagoPA>>
+  [ANPR] <<anpr>>
+  [PDND] <<pdnd>>
+}
+
+package "Servizi Esterni" {
+  [API Gateway] <<external>>
+  [CDN / Storage] <<external>>
+}
+
+[Back-end Istanze] --> [Gestore Documenti] : gestisci()
+[Back-end Istanze] --> "PostgreSQL" : persisti()
+[Back-end Istanze] --> "Message Queue" : pubblica()
+[Back-end Istanze] --> [SPID / CIE Auth] : verifica()
+[Back-end Istanze] --> [pagoPA] : pagamento()
+[Back-end Istanze] --> [ANPR] : anagrafica()
+[Back-end Istanze] --> [PDND] : interoperabilità()
+[Back-end Istanze] --> [API Gateway] : esponi()
+[API Gateway] --> [CDN / Storage] : distribuisci()
+
+note right of "PostgreSQL"
+  Sfondo #FFFFFF — pure white
+  Bordi sottili per elementi definiti
+  Ideale per stampa, PDF e Confluence
+end note
+
+legend right
+  | <<core>>     | Servizi interni PA      |
+  | <<storage>>  | Basi dati / Queue       |
+  | <<spid>>     | Identità SPID / CIE     |
+  | <<pagoPA>>   | Pagamenti pagoPA        |
+  | <<anpr>>     | Anagrafe ANPR           |
+  | <<pdnd>>     | Piattaforma Digitale    |
+  | <<external>> | Servizi terze parti     |
+endlegend
+
+@enduml

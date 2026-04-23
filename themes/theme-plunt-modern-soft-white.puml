@@ -1,0 +1,288 @@
+'' ============================================================
+'' MODERN-SOFT-WHITE THEME — Pure White Edition
+''
+'' Variante con sfondo bianco puro, ideale per stampa,
+'' export PDF, Confluence e presentazioni su proiettori:
+''   · Sfondo bianco puro (#FFFFFF)
+''   · Card con sfondo leggermente tintato (#F5F8FC)
+''   · Bordi sottili visibili per definire gli elementi su bianco
+''   · Blu principale (#0055AA) ad alto contrasto
+''   · Angoli arrotondati (RoundCorner 10)
+''   · Ombra leggera (Shadowing true) per profondità card-style
+''
+'' Ideale per: stampa, PDF, export da Confluence,
+'' presentazioni su schermi luminosi e proiettori.
+'' ============================================================
+
+'' ── Palette (colori — sfondo bianco) ─────────────────────
+!$PW_BG           = "#FFFFFF"
+!$PW_BG2          = "#F5F8FC"
+!$PW_BG3          = "#EAF0F9"
+!$PW_SURFACE      = "#DDE8F4"
+!$PW_BORDER       = "#C8D8EC"
+!$PW_BORDER2      = "#B8CCDF"
+!$PW_TEXT         = "#17324D"
+!$PW_TEXT_DIM     = "#506070"
+!$PW_TEXT_BRIGHT  = "#0D1926"
+!$PW_BLUE         = "#0055AA"
+!$PW_BLUE_DARK    = "#003D80"
+!$PW_BLUE_LIGHT   = "#0066CC"
+!$PW_BLUE_PALE    = "#DCE9FF"
+!$PW_TEAL         = "#0B6B5E"
+!$PW_TEAL_PALE    = "#DDF2EE"
+!$PW_AMBER        = "#7D5C10"
+!$PW_AMBER_PALE   = "#FFF6E0"
+!$PW_RED          = "#8B2222"
+!$PW_RED_PALE     = "#FDEAEA"
+!$PW_GREEN        = "#1A7045"
+!$PW_GREEN_PALE   = "#E4F8ED"
+!$PW_SLATE        = "#3D5060"
+
+'' ── Global ──────────────────────────────────────────────────
+skinparam BackgroundColor $PW_BG
+skinparam DefaultFontName  "Titillium Web", "Segoe UI", Roboto, Helvetica, Arial, sans-serif
+skinparam DefaultFontColor $PW_TEXT
+skinparam DefaultFontSize  13
+skinparam TitleFontColor   $PW_TEXT_BRIGHT
+skinparam TitleFontSize    20
+skinparam TitleFontStyle   bold
+skinparam HyperlinkColor   $PW_BLUE_LIGHT
+skinparam Shadowing        true
+skinparam RoundCorner      10
+skinparam Padding          10
+
+'' ── Linee ortogonali (standard PA) ──────────────────────────
+skinparam linetype ortho
+
+'' ── Arrows ──────────────────────────────────────────────────
+skinparam ArrowColor       $PW_BLUE
+skinparam ArrowFontColor   $PW_TEXT_DIM
+skinparam ArrowFontSize    11
+skinparam ArrowThickness   1
+
+'' ── Note / Legend ────────────────────────────────────────────
+skinparam NoteBackgroundColor  $PW_AMBER_PALE
+skinparam NoteBorderColor      #E8C87A
+skinparam NoteFontColor        #3D2A08
+skinparam NoteFontSize         11
+
+skinparam LegendBackgroundColor $PW_BG2
+skinparam LegendBorderColor    $PW_BORDER
+skinparam LegendFontColor      $PW_TEXT_DIM
+skinparam LegendFontSize       11
+
+'' ── Rectangle / Package / Node / Cloud ──────────────────────
+skinparam RectangleBackgroundColor $PW_BG2
+skinparam RectangleBorderColor    $PW_BORDER
+skinparam RectangleFontColor      $PW_TEXT
+
+skinparam PackageBackgroundColor  $PW_BG3
+skinparam PackageBorderColor      $PW_BORDER2
+skinparam PackageFontColor        $PW_TEXT
+skinparam PackageFontStyle        bold
+
+skinparam NodeBackgroundColor     $PW_BG2
+skinparam NodeBorderColor         $PW_BORDER
+skinparam NodeFontColor           $PW_TEXT
+
+skinparam CloudBackgroundColor    $PW_BG3
+skinparam CloudBorderColor        $PW_BORDER2
+skinparam CloudFontColor          $PW_TEXT_DIM
+
+'' ── Component / Interface / Database / Queue ────────────────
+skinparam ComponentBackgroundColor $PW_BG2
+skinparam ComponentBorderColor    $PW_BORDER
+skinparam ComponentFontColor      $PW_TEXT
+
+skinparam InterfaceBackgroundColor $PW_BLUE_PALE
+skinparam InterfaceBorderColor    #A8C8F0
+skinparam InterfaceFontColor      $PW_BLUE_DARK
+
+skinparam DatabaseBackgroundColor $PW_TEAL_PALE
+skinparam DatabaseBorderColor     #9ED4CC
+skinparam DatabaseFontColor       #0A4E45
+
+skinparam QueueBackgroundColor    $PW_BG3
+skinparam QueueBorderColor        $PW_BORDER2
+skinparam QueueFontColor          $PW_SLATE
+
+'' ── Class ───────────────────────────────────────────────────
+skinparam ClassBackgroundColor        $PW_BG2
+skinparam ClassBorderColor            $PW_BORDER
+skinparam ClassFontColor              $PW_TEXT
+skinparam ClassAttributeFontColor     $PW_TEXT_DIM
+skinparam ClassStereotypeFontColor    $PW_TEXT_DIM
+skinparam ClassHeaderBackgroundColor  $PW_SURFACE
+
+'' ── Sequence ────────────────────────────────────────────────
+skinparam ParticipantBackgroundColor $PW_BG2
+skinparam ParticipantBorderColor    $PW_BORDER
+skinparam ParticipantFontColor      $PW_TEXT
+skinparam ParticipantPadding        10
+
+skinparam ActorBackgroundColor      $PW_BLUE_PALE
+skinparam ActorBorderColor          #A8C8F0
+skinparam ActorFontColor            $PW_BLUE_DARK
+
+skinparam LifeLineBackgroundColor   $PW_BG3
+skinparam LifeLineBorderColor       $PW_BORDER
+
+skinparam SequenceGroupBackgroundColor $PW_BG2
+skinparam SequenceGroupBorderColor    $PW_BORDER2
+skinparam SequenceGroupFontColor      $PW_TEXT_DIM
+
+skinparam SequenceDividerBackgroundColor $PW_SURFACE
+skinparam SequenceDividerBorderColor    $PW_BORDER
+skinparam SequenceDividerFontColor      $PW_TEXT
+
+skinparam SequenceBoxBackgroundColor $PW_BG2
+skinparam SequenceBoxBorderColor     $PW_BORDER
+
+'' ── Activity ────────────────────────────────────────────────
+skinparam ActivityBackgroundColor        $PW_BG2
+skinparam ActivityBorderColor            $PW_BORDER
+skinparam ActivityFontColor              $PW_TEXT
+skinparam ActivityDiamondBackgroundColor $PW_SURFACE
+skinparam ActivityDiamondBorderColor     $PW_BORDER2
+skinparam ActivityDiamondFontColor       $PW_TEXT
+
+skinparam PartitionBackgroundColor $PW_BG
+skinparam PartitionBorderColor     $PW_BORDER
+
+'' ─── Stereotype: <<core>>  ─  Servizi interni PA ───────────
+skinparam component<<core>> {
+  BackgroundColor $PW_SURFACE
+  BorderColor $PW_BORDER
+  FontColor #003D7A
+}
+skinparam participant<<core>> {
+  BackgroundColor $PW_SURFACE
+  BorderColor $PW_BORDER
+  FontColor #003D7A
+}
+skinparam node<<core>> {
+  BackgroundColor $PW_SURFACE
+  BorderColor $PW_BORDER
+  FontColor #003D7A
+}
+skinparam class<<entity>> {
+  BackgroundColor $PW_SURFACE
+  BorderColor $PW_BORDER
+  FontColor #003D7A
+}
+
+'' ─── Stereotype: <<external>>  ─  Servizi terze parti ──────
+skinparam component<<external>> {
+  BackgroundColor $PW_AMBER_PALE
+  BorderColor #E8C87A
+  FontColor #3D2A08
+}
+skinparam participant<<external>> {
+  BackgroundColor $PW_AMBER_PALE
+  BorderColor #E8C87A
+  FontColor #3D2A08
+}
+skinparam node<<external>> {
+  BackgroundColor $PW_AMBER_PALE
+  BorderColor #E8C87A
+  FontColor #3D2A08
+}
+skinparam class<<warning>> {
+  BackgroundColor $PW_AMBER_PALE
+  BorderColor #E8C87A
+  FontColor #3D2A08
+}
+
+'' ─── Stereotype: <<storage>>  ─  Basi dati ─────────────────
+skinparam component<<storage>> {
+  BackgroundColor $PW_TEAL_PALE
+  BorderColor #9ED4CC
+  FontColor #0A4E45
+}
+skinparam database<<storage>> {
+  BackgroundColor $PW_TEAL_PALE
+  BorderColor #9ED4CC
+  FontColor #0A4E45
+}
+skinparam participant<<storage>> {
+  BackgroundColor $PW_TEAL_PALE
+  BorderColor #9ED4CC
+  FontColor #0A4E45
+}
+skinparam node<<storage>> {
+  BackgroundColor $PW_TEAL_PALE
+  BorderColor #9ED4CC
+  FontColor #0A4E45
+}
+
+'' ─── Stereotype: <<critical>>  ─  Componenti critici ───────
+skinparam component<<critical>> {
+  BackgroundColor $PW_RED_PALE
+  BorderColor #F0AAAA
+  FontColor #5C1414
+}
+skinparam database<<critical>> {
+  BackgroundColor $PW_RED_PALE
+  BorderColor #F0AAAA
+  FontColor #5C1414
+}
+skinparam participant<<critical>> {
+  BackgroundColor $PW_RED_PALE
+  BorderColor #F0AAAA
+  FontColor #5C1414
+}
+skinparam participant<<hot>> {
+  BackgroundColor $PW_RED_PALE
+  BorderColor #F0AAAA
+  FontColor #5C1414
+}
+skinparam node<<critical>> {
+  BackgroundColor $PW_RED_PALE
+  BorderColor #F0AAAA
+  FontColor #5C1414
+}
+
+'' ─── Stereotype: <<service>>  ─  Microservizi ──────────────
+skinparam class<<service>> {
+  BackgroundColor $PW_GREEN_PALE
+  BorderColor #9EDABB
+  FontColor #0C4226
+}
+
+'' ─── Stereotype: <<spid>>  ─  Identità SPID/CIE ───────────
+skinparam component<<spid>> {
+  BackgroundColor #D6E8FF
+  BorderColor #A0BEE8
+  FontColor #1A3A6B
+}
+skinparam participant<<spid>> {
+  BackgroundColor #D6E8FF
+  BorderColor #A0BEE8
+  FontColor #1A3A6B
+}
+
+'' ─── Stereotype: <<pagoPA>>  ─  Pagamenti pagoPA ───────────
+skinparam component<<pagoPA>> {
+  BackgroundColor $PW_BLUE_PALE
+  BorderColor #A8C8F0
+  FontColor #004080
+}
+skinparam participant<<pagoPA>> {
+  BackgroundColor $PW_BLUE_PALE
+  BorderColor #A8C8F0
+  FontColor #004080
+}
+
+'' ─── Stereotype: <<anpr>>  ─  Anagrafe ANPR ────────────────
+skinparam component<<anpr>> {
+  BackgroundColor $PW_TEAL_PALE
+  BorderColor #9ED4CC
+  FontColor #0A4E45
+}
+
+'' ─── Stereotype: <<pdnd>>  ─  Piattaforma Digitale ─────────
+skinparam component<<pdnd>> {
+  BackgroundColor $PW_SURFACE
+  BorderColor $PW_BORDER
+  FontColor #002E5C
+}
